@@ -1,5 +1,4 @@
-import React from 'react';
-import { Award, Download, Filter, FileText, CheckSquare, BarChart2, TrendingUp, FolderTree } from 'lucide-react';
+import { Award, Download, Filter, FileText, CheckSquare, BarChart2, FolderTree } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const CERT_DATA = [

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { GraduationCap, BookOpen, ShieldCheck, ArrowRight } from 'lucide-react';
 import type { Role } from '../App';
 
@@ -95,11 +95,11 @@ export default function Login({ onLogin }: LoginProps) {
 }
 
 function RoleCard({ title, desc, icon: Icon, color, onClick }: any) {
-  const colorStyles = {
+  const colorStyles = ({
     blue: 'hover:border-blue-300 hover:shadow-blue-500/10 group-hover:bg-blue-50 group-hover:text-blue-600',
     teal: 'hover:border-teal-300 hover:shadow-teal-500/10 group-hover:bg-teal-50 group-hover:text-teal-600',
     purple: 'hover:border-purple-300 hover:shadow-purple-500/10 group-hover:bg-purple-50 group-hover:text-purple-600',
-  }[color as string];
+  } as Record<string, string>)[color as string] || '';
 
   return (
     <button 

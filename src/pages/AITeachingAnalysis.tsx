@@ -1,5 +1,4 @@
-import React from 'react';
-import { Play, Pause, Volume2, Maximize, MessageSquare, AlertTriangle, CheckCircle, Sparkles } from 'lucide-react';
+import { Play, Volume2, Maximize, MessageSquare, AlertTriangle, CheckCircle, Sparkles } from 'lucide-react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
 const RADAR_DATA = [

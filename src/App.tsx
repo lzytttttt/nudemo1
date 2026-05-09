@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import DataPlatform from './pages/DataPlatform';
@@ -19,7 +19,7 @@ function App() {
 
   const renderPage = () => {
     switch (currentPage) {
-      case 'dashboard': return <Dashboard role={currentRole} />;
+      case 'dashboard': return <Dashboard />;
       case 'data': return <DataPlatform />;
       case 'venue': return <VenueReservation />;
       case 'ai-analysis': return <AITeachingAnalysis />;
@@ -28,7 +28,7 @@ function App() {
       case 'assignments': return <Assignments />;
       case 'equipment': return <EquipmentMaintenance />;
       case 'certification': return <CertificationData />;
-      default: return <Dashboard role={currentRole} />;
+      default: return <Dashboard />;
     }
   };
 

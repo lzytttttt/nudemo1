@@ -1,9 +1,7 @@
-import React from 'react';
-import { Users, Monitor, Brain, Activity, Clock, CheckCircle } from 'lucide-react';
-import type { Role } from '../App';
+import { Users, Brain, Clock, CheckCircle } from 'lucide-react';
 import {
-  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer,
-  BarChart, Bar, Legend
+  AreaChart, Area, XAxis, YAxis, Tooltip as RechartsTooltip, ResponsiveContainer,
+  BarChart, Bar
 } from 'recharts';
 
 const TREND_DATA = [
@@ -23,11 +21,7 @@ const BAR_DATA = [
   { name: '艺术学院', rate: 90 },
 ];
 
-interface DashboardProps {
-  role: Role;
-}
-
-export default function Dashboard({ role }: DashboardProps) {
+export default function Dashboard() {
   return (
     <div className="space-y-6">
       {/* KPI Cards */}
@@ -173,11 +167,11 @@ function UsageBar({ name, usage }: { name: string, usage: number }) {
 }
 
 function TimelineItem({ time, content, status }: any) {
-  const statusColor = {
+  const statusColor = ({
     success: 'bg-green-500 border-green-100',
     warning: 'bg-orange-500 border-orange-100',
     info: 'bg-blue-500 border-blue-100'
-  }[status as string];
+  } as Record<string, string>)[status as string] || 'bg-slate-500';
 
   return (
     <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">

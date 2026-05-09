@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { 
   LayoutDashboard, 
   Database, 
@@ -11,8 +11,7 @@ import {
   Wrench, 
   Award,
   Bell,
-  Search,
-  ChevronDown
+  Search
 } from 'lucide-react';
 import type { Role } from '../App';
 

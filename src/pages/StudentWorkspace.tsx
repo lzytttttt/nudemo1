@@ -1,4 +1,3 @@
-import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import { Trophy, Target, History, CalendarCheck, BookOpen, AlertCircle, ArrowRight } from 'lucide-react';
 
@@ -174,7 +173,7 @@ export default function StudentWorkspace() {
   );
 }
 
-function TaskCard({ title, deadline, status, type }: any) {
+function TaskCard({ title, deadline, type }: any) {
   return (
     <div className="flex items-center justify-between p-4 bg-white/60 border border-slate-100 rounded-xl hover:border-blue-200 transition-colors group">
       <div>

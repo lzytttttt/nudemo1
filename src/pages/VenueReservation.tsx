@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Calendar, Clock, MapPin, Users, Zap, Search, SlidersHorizontal, Check } from 'lucide-react';
+import { useState } from 'react';
+import { Calendar, Clock, MapPin, Users, Zap, SlidersHorizontal, Check } from 'lucide-react';
 
 export default function VenueReservation() {
   const [activeTab, setActiveTab] = useState<'quick' | 'regular'>('quick');

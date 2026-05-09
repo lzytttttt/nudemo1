@@ -1,5 +1,4 @@
-import React from 'react';
-import { Server, Monitor, Video, ShieldAlert, CheckCircle, Clock, Map, Wrench } from 'lucide-react';
+import { Server, Monitor, Video, ShieldAlert, CheckCircle, Map, Wrench } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, Tooltip as RechartsTooltip, ResponsiveContainer } from 'recharts';
 
 const NETWORK_DATA = [

@@ -1,15 +1,14 @@
-import React from 'react';
-import { Database, Network, ArrowRightLeft, ShieldCheck, Cpu, HardDrive } from 'lucide-react';
+import { Cpu } from 'lucide-react';
 
 export default function DataPlatform() {
   return (
     <div className="space-y-6">
       {/* Top metrics */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <MetricCard title="数据接入总量" value="12.5 TB" trend="+2.4GB" color="blue" />
-        <MetricCard title="接口运行数" value="142 个" trend="100% 正常" color="teal" />
-        <MetricCard title="今日数据增量" value="56,230 条" trend="较昨日持平" color="purple" />
-        <MetricCard title="数据质量评分" value="98.5 分" trend="极佳" color="green" />
+        <MetricCard title="数据接入总量" value="12.5 TB" trend="+2.4GB" />
+        <MetricCard title="接口运行数" value="142 个" trend="100% 正常" />
+        <MetricCard title="今日数据增量" value="56,230 条" trend="较昨日持平" />
+        <MetricCard title="数据质量评分" value="98.5 分" trend="极佳" />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -134,7 +133,7 @@ export default function DataPlatform() {
   );
 }
 
-function MetricCard({ title, value, trend, color }: any) {
+function MetricCard({ title, value, trend }: any) {
   return (
     <div className="glass-card p-5">
       <h4 className="text-sm text-slate-500 mb-2">{title}</h4>
@@ -144,28 +143,6 @@ function MetricCard({ title, value, trend, color }: any) {
       </div>
     </div>
   );
-}
-
-function FlowStep({ icon: Icon, title, subtitle, active }: any) {
-  return (
-    <div className="flex flex-col items-center gap-2 group cursor-pointer">
-      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all ${
-        active 
-          ? 'bg-gradient-to-br from-blue-500 to-teal-400 text-white shadow-lg scale-110' 
-          : 'bg-white text-slate-400 shadow-sm border border-slate-100 group-hover:border-blue-300'
-      }`}>
-        <Icon size={24} />
-      </div>
-      <div className="text-center">
-        <span className="block text-[10px] font-bold text-blue-500 mb-0.5">{subtitle}</span>
-        <span className={`text-xs font-medium ${active ? 'text-slate-800' : 'text-slate-500'}`}>{title}</span>
-      </div>
-    </div>
-  );
-}
-
-function FlowArrow() {
-  return <ArrowRightLeft size={20} className="text-slate-300 hidden md:block" />;
 }
 
 function AlgorithmCard({ name, status, reqs }: any) {

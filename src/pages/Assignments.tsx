@@ -1,4 +1,3 @@
-import React from 'react';
 import { Layers, Plus, BookOpen, PenTool, LayoutTemplate, MessageSquarePlus, PieChart } from 'lucide-react';
 
 export default function Assignments() {
@@ -33,10 +32,10 @@ export default function Assignments() {
         <div className="lg:col-span-3 space-y-6">
           {/* Stats overview */}
           <div className="grid grid-cols-4 gap-4">
-            <StatCard label="运行中作业" value="12" color="blue" />
-            <StatCard label="待批阅总数" value="45" color="orange" />
-            <StatCard label="本周已批阅" value="128" color="green" />
-            <StatCard label="平均提交率" value="94%" color="teal" />
+            <StatCard label="运行中作业" value="12" />
+            <StatCard label="待批阅总数" value="45" />
+            <StatCard label="本周已批阅" value="128" />
+            <StatCard label="平均提交率" value="94%" />
           </div>
 
           <div className="glass-card p-6">
@@ -123,7 +122,7 @@ function TemplateCard({ name, type, icon: Icon, color }: any) {
   );
 }
 
-function StatCard({ label, value, color }: any) {
+function StatCard({ label, value }: any) {
   return (
     <div className="glass-card p-4 text-center">
       <p className="text-2xl font-bold text-slate-800">{value}</p>
@@ -133,9 +132,6 @@ function StatCard({ label, value, color }: any) {
 }
 
 function AssignmentRow({ title, class: className, deadline, submitted, total, graded, done }: any) {
-  const submitRate = Math.round((submitted / total) * 100);
-  const gradeRate = Math.round((graded / submitted) * 100) || 0;
-
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 bg-white/60 border border-slate-100 rounded-xl hover:shadow-sm transition-all gap-4">
       <div className="flex-1">

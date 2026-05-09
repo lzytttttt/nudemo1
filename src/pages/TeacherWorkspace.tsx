@@ -1,4 +1,3 @@
-import React from 'react';
 import { Target, Users, AlertCircle, Send, CheckCircle2, FileVideo, Edit3 } from 'lucide-react';
 
 export default function TeacherWorkspace() {
