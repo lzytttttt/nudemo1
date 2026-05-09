@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const p = require\\('C:/Users/wuji/normaluniversityplatform/node_modules/vite/package.json'\\); console.log\\('vite:', p.version\\)\")",
+      "Bash(node -e \"const p = require\\('C:/Users/wuji/normaluniversityplatform/node_modules/react/package.json'\\); console.log\\('react:', p.version\\)\")",
+      "Bash(node -e \"const p = require\\('C:/Users/wuji/normaluniversityplatform/node_modules/recharts/package.json'\\); console.log\\('recharts:', p.version\\)\")",
+      "Bash(node -e \"const p = require\\('C:/Users/wuji/normaluniversityplatform/node_modules/tailwindcss/package.json'\\); console.log\\('tailwindcss:', p.version\\)\")",
+      "Bash(node -e \"const p = require\\('C:/Users/wuji/normaluniversityplatform/node_modules/typescript/package.json'\\); console.log\\('typescript:', p.version\\)\")",
+      "Bash(node *)",
+      "Bash(npm run *)",
+      "Bash(npx vite *)",
+      "Bash(curl -s http://localhost:5174)",
+      "Bash(curl -s \"http://localhost:5175/src/main.tsx\")",
+      "Bash(curl -s \"http://localhost:5175/src/index.css\")",
+      "Bash(curl -s \"http://localhost:5175/src/App.tsx\")",
+      "Bash(curl -s \"http://localhost:5175/src/components/Layout.tsx\")",
+      "Bash(curl -s \"http://localhost:5175/src/pages/Dashboard.tsx\")",
+      "Bash(curl -s \"http://localhost:5175/src/pages/EquipmentMaintenance.tsx\")"
+    ]
+  }
+}
